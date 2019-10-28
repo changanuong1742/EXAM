@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+
+
+function tryRemoveArray(arr, index) {
+    for (var i = 0; i<arr.length; i++){
+        if(arr[i]===arr[index]){
+            arr.splice(i, 1);
+            break;
+        }
+    }
+    return arr;
+}
+var canxoa2 = 2;
+var nums = [12, 6, 3, 7, 21, 5, 7];
+document.write('Mảng Đầu Vào: ' + nums + '<br> ');
+document.write('Xoá Phần Tử Thứ: ' + canxoa2 + '<br>');
+var del0 = tryRemoveArray(nums, canxoa2);
+document.write('Kết Quả: ' + del0 + '<br><br>');
+
+
+var nums2 = [12, 6, 3, 7, 21, 5, 7];
+var canxoa0 = 0;
+document.write('Mảng Đầu Vào: ' + nums + '<br> ');
+document.write('Xoá Phần Tử Thứ: ' + canxoa0 + '<br>');
+var del0 = tryRemoveArray(nums2, canxoa0);
+document.write('Kết Quả: ' + del0 + '<br><br>');
+
+var nums3 = [12, 6, 3, 7, 21, 5, 7];
+var canxoa7 = 7;
+document.write('Mảng Đầu Vào: ' + nums3 + '<br> ');
+document.write('Xoá Phần Tử Thứ: ' + canxoa7 + '<br>');
+var del0 = tryRemoveArray(nums3, canxoa7);
+document.write('Kết Quả: ' + del0 + '<br><br>');
+
+var nums4 = [12, 6, 3, 7, 21, 5, 7];
+var canxoa_2 = -2;
+document.write('Mảng Đầu Vào: ' + nums4 + '<br> ');
+document.write('Xoá Phần Tử Thứ: ' + canxoa_2 + '<br>');
+var del0 = tryRemoveArray(nums4, canxoa_2);
+document.write('Kết Quả: ' + del0 + '<br><br>');
+
+
+
+        
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

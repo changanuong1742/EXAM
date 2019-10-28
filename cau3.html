@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+
+        function isPrime(number) {
+            let snt = true;
+            let i;
+            if (number < 2) {
+                snt = false;
+            } else {
+                if (number <= 3) {
+                    snt = true;
+                } else {
+                    if (number % 2 == 0) {
+                        snt = false;
+                    } else {
+                        for (i = 3; i < number - 1; i++) {
+                            if (number % i == 0) {
+                                snt = false;
+                                break;
+                            }
+
+                        }
+                    }
+                }
+            }
+            return snt;
+        }
+
+        function checkPrime() {
+            let b = Number(document.getElementById("number").value);
+            if (isPrime(b)) {
+                document.write(b + ' Là số nguyên tố');
+            } else {
+                document.write(b + ' không phải số nguyên tố');
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+<input id="number">
+<button id="show" onclick="checkPrime()">Hiện</button>
+
+</body>
+</html>
